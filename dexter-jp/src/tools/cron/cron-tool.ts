@@ -53,16 +53,16 @@ Write it as a clear instruction, e.g.: "Check the latest financials for 7203 (To
 
 const scheduleSchema = z.discriminatedUnion('kind', [
   z.object({
-    kind: z.literal('at'),
+    kind: z.enum(['at']),
     at: z.string().describe('ISO-8601 timestamp for one-shot execution'),
   }),
   z.object({
-    kind: z.literal('every'),
+    kind: z.enum(['every']),
     everyMs: z.number().min(60000).describe('Interval in milliseconds (minimum 60000 = 1 minute)'),
     anchorMs: z.number().optional().describe('Optional anchor timestamp in ms'),
   }),
   z.object({
-    kind: z.literal('cron'),
+    kind: z.enum(['cron']),
     expr: z.string().describe('Cron expression (5 or 6 fields)'),
     tz: z.string().optional().describe('IANA timezone (default: system timezone)'),
   }),
