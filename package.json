@@ -1,24 +1,11 @@
 {
   "name": "dexter-api-agent",
   "version": "1.0.0",
-  "description": "Dexter API Agent with Bun on Render",
   "main": "src/index.ts",
   "scripts": {
-    "start": "./bun run src/index.ts",
-    "dev": "bun run --watch src/index.ts"
+    "start": "./bun run src/index.ts"
   },
   "dependencies": {
-    "@langchain/anthropic": "^0.2.18",
-    "@langchain/google-genai": "^0.0.10",
-    "@langchain/openai": "^0.0.20",
-    "@langchain/mistralai": "^0.0.20",
-    "@langchain/core": "^0.2.36",
-    "@langchain/textsplitters": "^0.0.2",
-    "@types/node": "^20.12.7",
-    "express": "^4.19.2",
-    "typescript": "^5.4.5"
-  },
-  "devDependencies": {
-    "bun-types": "latest"
+    "express": "^4.19.2"
   }
 }
