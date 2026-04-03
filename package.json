@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "@types/node": "^20"
+    "@types/node": "^20",
+    "@langchain/openai": "^0.0.20",
+    "@langchain/core": "^0.2.0",
+    "@langchain/textsplitters": "^0.0.2",
   },
   "devDependencies": {
     "typescript": "^5.0.0"
